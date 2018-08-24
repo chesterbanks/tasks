@@ -19,8 +19,8 @@
                 color: rgb(125, 94, 68);
             }
             
-            .splash {
-                margin-top: -70px;
+            .splash, .enter-title {
+                margin-top: -65px;
 
                 padding: 0px;
 
@@ -79,9 +79,22 @@
 
             <button class = "splash-btn">Get started!</button>
         </div>
+
+
+        <div class="enter-title">
+            <h1 class="splash-txt">enter your title</h1>
+        </div>
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+        $(".splash").show();
+        $(".enter-title").hide();
+
+        $(".splash-btn").click(function (){
+            $(".splash").hide();
+            $(".enter-title").show();
+        });
+
         /*$(".blog").hide();
         $(".about").hide();
         $(".schedule").hide();
