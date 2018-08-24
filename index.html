@@ -15,12 +15,12 @@
             body {
                 background: rgb(227, 218, 214);
                 background-size: cover;
-                font-family: 'Lato';
+                font-family: Poppins;
                 color: rgb(125, 94, 68);
             }
             
             .splash, .enter-title {
-                margin-top: -65px;
+                margin-top: -67px;
 
                 padding: 0px;
 
@@ -38,7 +38,6 @@
             }
 
             .splash-txt {
-                font-family: Poppins;
                 font-size: 100px;
                 text-align: center;
 
@@ -50,7 +49,6 @@
             .splash-btn {
                 display: block;
                 
-                font-family: Poppins;
                 background: rgba(255, 255, 255, 0.3);
                 color: rgb(246, 246, 246);
                 padding: 10px;
@@ -71,6 +69,21 @@
                 margin-top: 5px;
                 box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.3);
             }
+
+            .prompt-txt {
+                padding-top: 270px;
+                font-size: 50px;
+                text-align: center;
+                color: white;
+            }
+
+            .title {
+                padding: 10px;
+                font-size: 30px;
+                
+                margin-left: auto;
+                margin-right: auto;
+            }
         </style>
     </head>
     <body>
@@ -82,7 +95,8 @@
 
 
         <div class="enter-title">
-            <h1 class="splash-txt">enter your title</h1>
+            <h3 class="prompt-txt">enter your title</h3>
+            <input class = "title" type="text">
         </div>
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
