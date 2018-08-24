@@ -68,13 +68,14 @@
                 box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.3);
             }
 
-            #title {
+            #title-txt {
                 font-size: 100px;
 
                 padding-top: 100px;
+                margin:0px;
                 letter-spacing: -7px;
-                color: white;
-            }
+                color: black;
+            } 
 
             .prompt-txt {
                 padding-top: 270px;
@@ -112,7 +113,8 @@
         </div>
 
 
-        <h1 id = "title"></h1>
+        <h1 id = "title-txt"></h1>
+
         <div class="enter-title">
             <h3 class="prompt-txt">enter your title</h3>
             <input class = "title" id = "title-input" type="text">
@@ -130,10 +132,10 @@
 
     <script> 
         var button = document.getElementById("title-btn");
-        var title = document.getElementById("title-input").value;
+        var myTitle = document.getElementById("title-input").value;
 
         var buttonClick = function(){
-                document.getElementById("title").textContent = title;
+            document.getElementById("title-txt").textContent += myTitle;
         };
 
         button.addEventListener("click", buttonClick);
