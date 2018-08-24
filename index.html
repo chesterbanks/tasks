@@ -68,6 +68,14 @@
                 box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.3);
             }
 
+            #title {
+                font-size: 100px;
+
+                padding-top: 100px;
+                letter-spacing: -7px;
+                color: white;
+            }
+
             .prompt-txt {
                 padding-top: 270px;
                 font-size: 50px;
@@ -90,9 +98,13 @@
             .title-btn {
                 margin-top: 100px;
             }
+            .title-btn:active { 
+                margin-top: 105px; 
+            }
         </style>
     </head>
     <body>
+
         <div class="splash">
             <h1 class="splash-txt">taskmonkey</h1>
 
@@ -100,11 +112,12 @@
         </div>
 
 
+        <h1 id = "title"></h1>
         <div class="enter-title">
             <h3 class="prompt-txt">enter your title</h3>
-            <input class = "title" id = "title" type="text">
+            <input class = "title" id = "title-input" type="text">
 
-            <button class = "title-btn">Next</button>
+            <button id = "title-btn" class = "title-btn">Next</button>
         </div>
 
         <div class="enter-tasks">
@@ -114,6 +127,18 @@
             <button class = "task-btn">Next</button>
         </div>
     </body>
+
+    <script> 
+        var button = document.getElementById("title-btn");
+        var title = document.getElementById("title-input").value;
+
+        var buttonClick = function(){
+                document.getElementById("title").textContent = title;
+        };
+
+        button.addEventListener("click", buttonClick);
+    </script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
         $(".splash").show();
