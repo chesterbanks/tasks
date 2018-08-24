@@ -17,9 +17,7 @@
                 background-size: cover;
                 font-family: Poppins;
                 color: rgb(125, 94, 68);
-            }
-            
-            .splash, .enter-title {
+
                 margin-top: -67px;
 
                 padding: 0px;
@@ -46,7 +44,7 @@
                 color: white;
             }
 
-            .splash-btn {
+            .splash-btn, button {
                 display: block;
                 
                 background: rgba(255, 255, 255, 0.3);
@@ -62,10 +60,10 @@
                 
                 font-size: 30px;
             }
-            .splash-btn:hover {
+            .splash-btn:hover, button:hover {
                 cursor: pointer;
             }
-            .splash-btn:active {
+            .splash-btn:active, button:active {
                 margin-top: 5px;
                 box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.3);
             }
@@ -101,17 +99,34 @@
 
         <div class="enter-title">
             <h3 class="prompt-txt">enter your title</h3>
-            <input class = "title" type="text">
+            <input class = "title" id = "title" type="text">
+
+            <button class = "title-btn">Next</button>
+        </div>
+
+        <div class="enter-tasks">
+            <h3 class="prompt-txt">add your tasks</h3>
+            <!-- <input class = "title" id = "title" type="text"> -->
+
+            <button class = "task-btn">Next</button>
         </div>
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
         $(".splash").show();
         $(".enter-title").hide();
+        $(".enter-tasks").hide();
 
         $(".splash-btn").click(function (){
             $(".splash").hide();
             $(".enter-title").show();
+        $(".enter-tasks").hide();
+        });
+
+        $(".title-btn").click(function (){
+            $(".splash").hide();
+            $(".enter-title").hide();
+        $(".enter-tasks").show();
         });
 
         /*$(".blog").hide();
