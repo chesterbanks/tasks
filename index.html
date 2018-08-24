@@ -113,12 +113,11 @@
         </div>
 
 
-        <h1 id = "title-txt">tEST?</h1>
 
         <div class="enter-title">
             <h3 class="prompt-txt">enter your title</h3>
 
-            <label>title<input id = "title-input" class = "title" type="text"></label>
+            <label>title<input id = "t" class = "title" type="text"></label>
 
             <button id = "title-btn" class = "title-btn">Next</button>
         </div>
@@ -129,6 +128,9 @@
 
             <button class = "task-btn">Next</button>
         </div>
+
+
+        <h1 id = "title-txt">Title</h1>
     </body>
 
     <script> 
@@ -143,7 +145,7 @@
       // Step 1: Find the element we want the event on
       var button = document.getElementById("title-btn");
       // Step 2: Define the event listener function
-      var name = "test" + document.getElementById("title-input");
+      var name = "test" + document.getElementById("t").value;
           
       var onButtonClick = function() {
           var greeting = "Hiya, " + name;
