@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Chester Banks</title>
+        <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        
+        <style>
+            body {
+                background: rgb(227, 218, 214);
+                background-size: cover;
+                font-family: 'Lato';
+                color: rgb(125, 94, 68);
+                padding: 20px;
+            }
+            h1 {
+                color: rgb(222, 84, 84);
+                font-size: 30px;
+                border-left: 5px rgb(222, 84, 84) solid;
+                padding: 20px;
+            }
+            h3 {
+                color: rgb(204, 143, 112);
+                font-size: 15px;
+                border-left: 5px rgb(222, 84, 84) solid;
+                padding-left: 20px;
+                margin-top: -40px;
+            }
+            
+            .post-content {
+                padding-left: 35px;
+                font-weight: 300;
+                border-left: 5px rgb(103, 182, 191) solid;
+                margin-top: -30px;
+            }
+            .post-title {
+                color: rgb(222, 84, 84);
+                font-size: 35px;
+                padding: 20px;
+                border-left: 5px rgb(103, 182, 191) solid;
+            }
+            
+            .nav1 { background-color: rgb(222, 84, 84); }
+            .nav2 { background-color: rgb(32, 179, 189); }
+            .nav3 { background-color: rgb(224, 192, 137); }
+            .nav4 { background-color: rgb(56, 173, 140); }
+            
+            .dropbtn {
+                background-color: rgb(222, 84, 84);
+                cursor: pointer;
+                border-radius: 50px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50px;
+                font-size: 25px;
+                color: rgba(255, 255, 255, 0.6);
+                border: none;
+                margin: 5px;
+                transition: all 0.2s;
+            }
+            
+            .dropdown {
+                display: block;
+                margin: -27px;
+            }
+            
+            .dropdown-content {
+                background-color: none;
+                text-align: CENTER;
+                display: none;
+                transition: all 0.2s;
+            }
+            
+            .dropdown-content a {
+                padding: 10px;
+                text-decoration: none;
+                display: inline;
+                width: 50px;
+                height: 50px;
+                cursor: pointer;
+                border-radius: 50px;
+                font-size: 25px;
+                color: rgba(255, 255, 255, 0.6);
+                transition: all 0.2s;
+            }
+            
+            .dropdown-content a:hover {
+                color: white;
+                box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+            }
+            
+            .dropdown:hover .dropdown-content {
+                display: inline;
+            }
+            
+            .dropdown:hover .dropbtn {
+                -webkit-transform: rotate(-90deg);
+            }
+            
+            td, th {
+                padding: 15px;
+                border: 1px rgba(0, 0, 0, 0.3) solid;
+                font-size: 14px;
+            }
+            .date {
+                font-size: 11px;
+            }
+            
+            .splash-bg {
+                position: absolute;
+                background: url("http://feelgrafix.com/data_images/out/16/907950-triangle-wallpaper.jpg") fixed no-repeat;
+                width: 100%;
+                height: 100%;
+                margin-top: -100px;
+                margin-left: -10px;
+                -webkit-filter: contrast(60%) sepia(30%) blur(2px);
+                z-index: -1;
+            }
+            .splash-icon {
+                margin-left: width/2;
+                margin-bottom: 20px;
+                width: 300;
+                height: 300;
+                border: none;
+                border-radius: 100px;
+            }
+            .splash-btn {
+                display: block;
+                
+                font-family: Lato;
+                background: rgba(255, 255, 255, 0.3);
+                color: rgb(246, 246, 246);
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.3), 0px 5px rgb(246, 246, 246);
+                border: 2px rgb(246, 246, 246) solid;
+                width: 200px;
+                margin-left: auto;
+                margin-right: auto;
+                transition: all 0.1s;
+                
+                font-size: 30px;
+                font-weight: 100;
+                letter-spacing: 10px;
+            }
+            .splash-btn:hover {
+                cursor: pointer;
+            }
+            .splash-btn:active {
+                margin-top: 5px;
+                box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.3);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="splash">
+            <div class = "splash-bg"></div>
+            <img class = "spash-icon" src="https://www.khanacademy.org/computer-programming/new-chester-banks-logo/4829043342311424/5639274879778816.png">
+            <button class = "splash-btn">YUP</button>
+        </div>
+        
+        <div class="title">
+            <!-- The navigation bar -->
+            <div class="dropdown">
+                <button class="dropbtn fa fa-bars"></button>
+                    <div class="dropdown-content">
+                    <a class="nav1 fa fa-home"></a>
+                    <a class="nav2 fa fa-info"></a>
+                    <a class="nav3 fa fa-calendar"></a>
+                    <a class="nav4 fa fa-envelope-o"></a>
+                </div>
+            </div>
+    
+            <!-- The title -->
+            <h1>CHESTER BANKS</h1> 
+            
+            <!-- The subtitle -->
+            <h3>making the game you want to play</h3>
+        </div>
+        
+        <!-- The blog -->
+        <div class = "blog">
+            <!-- The first post -->
+            <div class = "post">
+                <h2 class = "post-title">The Lord of the Rings</h2>
+                <p class = "post-content">When Mr. Bilbo Baggins of Bag End announced that he would shortly be celebrating his eleventy-first birthday with a party of special magnificence, there was much talk and excitement in Hobbiton.
+        <br><br>
+        Bilbo was very rich and very peculiar, and had been the wonder of the Shire for sixty years, ever since his remarkable disappearance and unexpected return. The riches he had brought back from his travels had now become a local legend, and it was popularly believed, whatever the old folk might say, that the Hill at Bag End was full of tunnels stuffed with treasure. And if that was not enough for fame, there was also his prolonged vigour to marvel at. Time wore on, but it seemed to have little effect on Mr. Baggins. At ninety he was much the same as at fifty. At ninety-nine they began to call him well-preserved ; but unchanged would have been nearer the mark. There were some that shook their heads and thought this was too much of a good thing; it seemed unfair that anyone should possess (apparently) perpetual youth as well as (reputedly) inexhaustible wealth.</p>
+            </div>
+            
+            <!-- The second post -->
+            <div class = "post">
+                <h2 class = "post-title">All About Pencils</h2>
+                <p class = "post-content">Pencils create marks by physical abrasion, leaving behind a trail of solid core material that adheres to a sheet of paper or other surface. They are distinct from pens, which instead disperse a trail of liquid or gel ink that stains the light colour of the paper.</p>
+            </div>
+        </div>
+        
+        <!-- The about post -->
+        <div class = "about">
+            <div class = "post">
+                <h2 class = "post-title">About me</h2>
+                <p class = "post-content">Hi there! I'm Chester Banks, a young man who likes art, reading, soccer, volleyball and coding. So far, most of my coding has been in processing.js on a helpful site called <a href = "https://www.khanacademy.org/">Khan Academy.</a>. I like to make games with great graphics. My latest game is called Doctors vs. Burgers, found <a href = "https://www.khanacademy.org/computer-programming/doctors-vs-burgers/6343681513488384">here</a>.<br><br>Stay tuned for more stuff on this website!</p>
+            </div>
+        </div>
+        
+        <!-- The schedule -->
+        <div class = "schedule">
+            <div class = "post">
+                <h2 class = "post-title">The Schedule: My Upcoming Games</h2>
+                    <table class = "post-content">
+                        <thead>
+                            <tr>
+                                <th class = "date">day</th>
+                                <th>S</th>
+                                <th>M</th>
+                                <th>T</th>
+                                <th>W</th>
+                                <th>Th</th>
+                                <th>F</th>
+                                <th>Sa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class = "date">1</td>
+                                <td><i>Super Jump</i> is released!</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class = "date">8</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><i>Amazing Hero</i> is released!</td>
+                                <td></td>
+                                <td></td>
+                                <td><i>Smile</i> is released!</td>
+                            </tr>
+                            <tr>
+                                <td class = "date">15</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><i>Jumpy Bunny</i> is released!</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class = "date">22</td>
+                                <td></td>
+                                <td><i>A Cloudy Day</i> is released!</td>
+                                <td></td>
+                                <td></td>
+                                <td><i>Epic Rush</i> is released!</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class = "date">23</td>
+                                <td></td>
+                                <td></td>
+                                <td><i>Big Hero 6: the Game</i> is released!</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+        
+        <!-- The contact page -->
+        <div class = "contact">
+            <div class = "post">
+                <h2 class = "post-title">Contact Me</h2>
+                <p class = "post-content">Just contact me by commenting a Tips & Thanks on any of my programs on Khan Academy!</p>
+            </div>
+        </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(".blog").hide();
+        $(".about").hide();
+        $(".schedule").hide();
+        $(".contact").hide();
+        $(".title").hide();
+        
+        $(".splash-btn").click(function (){
+            $(".splash").hide();
+            $(".title").show();
+            
+            $(".blog").show();
+            $(".about").hide();
+            $(".schedule").hide();
+            $(".contact").hide();
+        });
+        
+        $(".nav1").click(function() { 
+            $(".blog").show();
+            $(".about").hide();
+            $(".schedule").hide();
+            $(".contact").hide();
+        });
+        $(".nav2").click(function() { 
+            $(".blog").hide();
+            $(".about").show();
+            $(".schedule").hide();
+            $(".contact").hide();
+        });
+        $(".nav3").click(function() { 
+            $(".blog").hide();
+            $(".about").hide();
+            $(".schedule").show();
+            $(".contact").hide();
+        });
+        $(".nav4").click(function() { 
+            $(".blog").hide();
+            $(".about").hide();
+            $(".schedule").hide();
+            $(".contact").show();
+        });
+    </script>
+</html>
