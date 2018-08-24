@@ -7,6 +7,9 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
         
         <style>
+            body, html {
+                height: 100%;
+            }
             body {
                 background: rgb(227, 218, 214);
                 background-size: cover;
@@ -108,12 +111,17 @@
             }
             
             .splash-bg {
-                position: absolute;
-                background: url("https://static.vecteezy.com/system/resources/previews/000/136/250/non_2x/rhinestone-abstract-background-vector.jpg") fixed no-repeat;
-                width: window.innerWidth;
-                height: window.innerHeight;
-                margin-top: -100px;
-                margin-left: -100px;
+                /* The image used */
+                background-image: url("https://static.vecteezy.com/system/resources/previews/000/136/250/non_2x/rhinestone-abstract-background-vector.jpg");
+                
+                /* Full height */
+                height: 100%; 
+
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                
                 -webkit-filter: blur(2px);
                 z-index: -1;
             }
