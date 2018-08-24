@@ -131,14 +131,25 @@
     </body>
 
     <script> 
-        var button = document.getElementById("title-btn");
+        /*var button = document.getElementById("title-btn");
         var myTitle = document.getElementById("title-input").value;
 
         var buttonClick = function(){
             document.getElementById("title-txt").textContent += myTitle;
         };
 
-        button.addEventListener("click", buttonClick);
+        button.addEventListener("click", buttonClick);*/
+      // Step 1: Find the element we want the event on
+      var button = document.getElementById("title-btn");
+      // Step 2: Define the event listener function
+      var name = document.getElementById("title-input").value;
+          
+      var onButtonClick = function() {
+          var greeting = "Heyaz, " + name;
+        document.getElementById("title-txt").textContent += greeting;  
+      };
+      // Step 3: Attach event listener to element
+      button.addEventListener("click", onButtonClick);
     </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
