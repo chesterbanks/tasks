@@ -106,6 +106,10 @@
                 margin-left: auto;
                 margin-right: auto;
             }
+            .add-task-table th{
+                font-size: 20px;
+                color: white;
+            }
             .add-task-table input {
                 margin: 5px;
                 border: none;
@@ -124,7 +128,7 @@
             }
 
             .new-row-btn {
-                width: 800px;
+                width: 760px;
             }
 
             /* Finished schedule styling */
@@ -296,8 +300,6 @@
         $(".new-row-btn").click(function (){
             if(minus < 200){
                 minus += 22.5;
-            } else {
-                minus = 0;
             }
 
             var newRow = $('<tr><td><select><option value="calc">Calculus AB</option><option value="eng">English II</option><option value="span">Spanish III</option><option value="other">Other</option></select></td><td><input class = "task-input-name" type="text"></td><td><select><option value="all">All</option><option value="mon">Monday</option><option value="tue">Tuesday</option><option value="wed">Wednesday</option><option value="thu">Thursday</option><option value="fri">Friday</option></select></td></tr>');
