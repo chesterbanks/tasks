@@ -288,15 +288,15 @@
 
         /* [ENTER TASKS PAGE] Add row button, yeah a bit of a mess*/
         $(".new-row-btn").click(function (){
-            if(minus > -220){
-                minus -= 22.5;
+            if(minus < 200){
+                minus += 45;
             } else {
-                minus -= 45;
+                minus += 22.5;
             }
 
             var newRow = $('<tr><td><select><option value="calc">Calculus AB</option><option value="eng">English II</option><option value="span">Spanish III</option><option value="other">Other</option></select></td><td><input class = "task-input-name" type="text"></td><td><select><option value="all">All</option><option value="mon">Monday</option><option value="tue">Tuesday</option><option value="wed">Wednesday</option><option value="thu">Thursday</option><option value="fri">Friday</option></select></td></tr>');
             $("table").append(newRow);
-            $(".prompt-txt").css("padding-top", 270 + minus);
+            $(".prompt-txt").css("padding-top", 270 - minus);
         });
     </script>
 </html>
