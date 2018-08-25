@@ -62,6 +62,8 @@
                 font-size: 30px;
             }
             .splash-btn:hover, button:hover {
+                background: rgba(255, 255, 255, 0.5);
+                color: white;
                 cursor: pointer;
             }
             .splash-btn:active, button:active {
@@ -234,7 +236,7 @@
                 </tr>
             </table>
 
-            <button class = "new-row-btn">New Row</button>
+            <button class = "new-row-btn">Add task</button>
             <br><br>
             <button class = "task-btn">Finished!</button>
 
@@ -292,7 +294,7 @@
 
         /* [ENTER TASKS PAGE] Add row button, yeah a bit of a mess*/
         $(".new-row-btn").click(function (){
-            if(minus < 100){
+            if(minus < 50){
                 minus += 45;
             } else {
                 minus += 22.5;
