@@ -117,14 +117,14 @@
         <div class="enter-title">
             <h3 class="prompt-txt">enter your title</h3>
 
-            <label>title<input id = "t" class = "title" type="text"></label>
+            <input id = "title-input" class = "title" type="text">
 
             <button id = "title-btn" class = "title-btn">Next</button>
         </div>
 
+
         <div class="enter-tasks">
             <h3 class="prompt-txt">add your tasks</h3>
-            <!-- <input class = "title" id = "title" type="text"> -->
 
             <button class = "task-btn">Next</button>
         </div>
@@ -134,25 +134,14 @@
     </body>
 
     <script> 
-        /*var button = document.getElementById("title-btn");
+        var button = document.getElementById("title-btn");
         var myTitle = document.getElementById("title-input").value;
 
         var buttonClick = function(){
             document.getElementById("title-txt").textContent += myTitle;
         };
 
-        button.addEventListener("click", buttonClick);*/
-      // Step 1: Find the element we want the event on
-      var button = document.getElementById("title-btn");
-      // Step 2: Define the event listener function
-      var name = "test" + document.getElementById("t").value;
-          
-      var onButtonClick = function() {
-          var greeting = "Hiya, " + name;
-        document.getElementById("title-txt").textContent += greeting;  
-      };
-      // Step 3: Attach event listener to element
-      button.addEventListener("click", onButtonClick);
+        button.addEventListener("click", buttonClick);
     </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
