@@ -124,7 +124,7 @@
             }
 
             .new-row-btn {
-                width: 900px;
+                width: 800px;
             }
 
             /* Finished schedule styling */
@@ -294,10 +294,10 @@
 
         /* [ENTER TASKS PAGE] Add row button, yeah a bit of a mess*/
         $(".new-row-btn").click(function (){
-            if(minus < 50){
-                minus += 45;
-            } else {
+            if(minus < 200){
                 minus += 22.5;
+            } else {
+                minus = 0;
             }
 
             var newRow = $('<tr><td><select><option value="calc">Calculus AB</option><option value="eng">English II</option><option value="span">Spanish III</option><option value="other">Other</option></select></td><td><input class = "task-input-name" type="text"></td><td><select><option value="all">All</option><option value="mon">Monday</option><option value="tue">Tuesday</option><option value="wed">Wednesday</option><option value="thu">Thursday</option><option value="fri">Friday</option></select></td></tr>');
