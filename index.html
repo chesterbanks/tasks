@@ -86,6 +86,8 @@
 
             .title {
                 font-family: Poppins;
+                text-align: center;
+
                 color: rgb(50, 50, 50);
                 font-size: 30px;
 
@@ -106,13 +108,14 @@
     </head>
     <body>
 
+
+        <h1 id = "title-txt"></h1>
+
         <div class="splash">
             <h1 class="splash-txt">taskmonkey</h1>
 
             <button class = "splash-btn">Get started!</button>
         </div>
-
-
 
         <div class="enter-title">
             <h3 class="prompt-txt">enter your title</h3>
@@ -128,9 +131,6 @@
 
             <button class = "task-btn">Next</button>
         </div>
-
-
-        <h1 id = "title-txt">Title</h1>
     </body>
 
     <script> 
@@ -138,7 +138,7 @@
 
         var buttonClick = function(){
             var myTitle = document.getElementById("title-input").value;
-            document.getElementById("title-txt").textContent += myTitle;
+            document.getElementById("title-txt").textContent += myTitle.toLowerCase();
         };
 
         button.addEventListener("click", buttonClick);
