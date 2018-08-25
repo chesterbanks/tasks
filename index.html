@@ -134,11 +134,11 @@
     </body>
 
     <script> 
-        var button = document.getElementById("title-btn");
-        var myTitle = document.getElementById("title-input").value;
+        var button = document.getElementById("#title-btn");
+        var myTitle = document.getElementById("#title-input").value;
 
         var buttonClick = function(){
-            document.getElementById("title-txt").textContent += myTitle;
+            document.getElementById("#title-txt").textContent += myTitle;
         };
 
         button.addEventListener("click", buttonClick);
