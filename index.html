@@ -99,6 +99,27 @@
                 margin-top: 105px; 
             }
 
+            /* Add tasks page */
+            .add-task-table {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .add-task-table input {
+                margin: 5px;
+                border: none;
+                padding: 5px;
+                font-size: 14px;
+                font-family: Poppins;
+            }
+            .add-task-table select {
+                font-family: Poppins;
+                font-size: 15px;
+                font-weight: 400;
+                border: none;
+                height: 36px;
+                padding: 5px;
+                width: 230px;
+            }
 
             /* Finished schedule styling */
             #title-txt {
@@ -135,33 +156,77 @@
         <div class="enter-tasks">
             <h3 class="prompt-txt">add your tasks</h3>
 
-            <table>
+            <table class = 'add-task-table'>
                 <tr>
                     <th>Subject</th>
                     <th>Task Name</th>
                     <th>Day</th>
-                    <th>Deadline</th>
                 </tr>
 
                 <tr>
-                    <td><input class = "task-input-subject" type="text"></td>
+                    <td>
+                        <select>
+                            <option value='calc'>Calculus AB</option>
+                            <option value='eng'>English II</option>
+                            <option value='span'>Spanish III</option>
+                            <option value='other'>Other</option>
+                        </select>
+                    </td>
                     <td><input class = "task-input-name" type="text"></td>
-                    <td><input class = "task-input-day" type="text"></td>
-                    <td><input class = "task-input-deadline" type="text"></td>
+                    <td>
+                        <select>
+                            <option value='all'>All</option>
+                            <option value='mon'>Monday</option>
+                            <option value='tue'>Tuesday</option>
+                            <option value='wed'>Wednesday</option>
+                            <option value='thu'>Thursday</option>
+                            <option value='fri'>Friday</option>
+                        </select>
+                    </td>
                 </tr>
 
                 <tr>
-                    <td><input class = "task-input-subject" type="text"></td>
+                    <td>
+                        <select>
+                            <option value='calc'>Calculus AB</option>
+                            <option value='eng'>English II</option>
+                            <option value='span'>Spanish III</option>
+                            <option value='other'>Other</option>
+                        </select>
+                    </td>
                     <td><input class = "task-input-name" type="text"></td>
-                    <td><input class = "task-input-day" type="text"></td>
-                    <td><input class = "task-input-deadline" type="text"></td>
+                    <td>
+                        <select>
+                            <option value='all'>All</option>
+                            <option value='mon'>Monday</option>
+                            <option value='tue'>Tuesday</option>
+                            <option value='wed'>Wednesday</option>
+                            <option value='thu'>Thursday</option>
+                            <option value='fri'>Friday</option>
+                        </select>
+                    </td>
                 </tr>
 
                 <tr>
-                    <td><input class = "task-input-subject" type="text"></td>
+                    <td>
+                        <select>
+                            <option value='calc'>Calculus AB</option>
+                            <option value='eng'>English II</option>
+                            <option value='span'>Spanish III</option>
+                            <option value='other'>Other</option>
+                        </select>
+                    </td>
                     <td><input class = "task-input-name" type="text"></td>
-                    <td><input class = "task-input-day" type="text"></td>
-                    <td><input class = "task-input-deadline" type="text"></td>
+                    <td>
+                        <select>
+                            <option value='all'>All</option>
+                            <option value='mon'>Monday</option>
+                            <option value='tue'>Tuesday</option>
+                            <option value='wed'>Wednesday</option>
+                            <option value='thu'>Thursday</option>
+                            <option value='fri'>Friday</option>
+                        </select>
+                    </td>
                 </tr>
             </table>
 
@@ -187,10 +252,9 @@
         };
 
         button.addEventListener("click", buttonClick);
-
-        /* [ENTER TASKS PAGE]  */
     </script>
 
+    <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
 
@@ -221,9 +285,9 @@
             $(".schedule-finished").show();
         });
 
-        /* [ENTER TASKS PAGE] Add row button */
+        /* [ENTER TASKS PAGE] Add row button, yeah a bit of a mess*/
         $(".new-row-btn").click(function (){
-            var newRow = $('<tr><td><input class = "task-input-subject" type="text"></td><td><input class = "task-input-name" type="text"></td><td><input class = "task-input-day" type="text"></td><td><input class = "task-input-deadline" type="text"></td></tr>');
+            var newRow = $('<tr><td><select><option value="calc">Calculus AB</option><option value="eng">English II</option><option value="span">Spanish III</option><option value="other">Other</option></select></td><td><input class = "task-input-name" type="text"></td><td><select><option value="all">All</option><option value="mon">Monday</option><option value="tue">Tuesday</option><option value="wed">Wednesday</option><option value="thu">Thursday</option><option value="fri">Friday</option></select></td></tr>');
             $("table").append(newRow);
         });
     </script>
