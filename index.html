@@ -35,6 +35,7 @@
                 background-size: cover;
             }
 
+            /* Splash page styling */
             .splash-txt {
                 font-size: 100px;
                 text-align: center;
@@ -68,17 +69,7 @@
                 box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.3);
             }
 
-            #title-txt {
-                position: absolute;
-
-                font-size: 100px;
-                text-align: center;
-
-                padding-top: 100px;
-                margin:0px;
-                letter-spacing: -7px;
-                color: black;
-            } 
+            /* Enter Title page styling */
 
             .prompt-txt {
                 padding-top: 270px;
@@ -99,17 +90,32 @@
 
                 border-radius: 10px;
             }
+
             .title-btn {
                 margin-top: 100px;
             }
+
             .title-btn:active { 
                 margin-top: 105px; 
             }
+
+
+            /* Finished schedule styling */
+            #title-txt {
+                position: absolute;
+
+                font-size: 100px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 100px;
+
+                padding-top: 100px;
+                letter-spacing: -7px;
+                color: black;
+            } 
         </style>
     </head>
     <body>
-
-        <h1 id = "title-txt"></h1>
 
         <div class="splash">
             <h1 class="splash-txt">taskmonkey</h1>
@@ -129,11 +135,50 @@
         <div class="enter-tasks">
             <h3 class="prompt-txt">add your tasks</h3>
 
-            <button class = "task-btn">Next</button>
+            <table>
+                <tr>
+                    <th>Subject</th>
+                    <th>Task Name</th>
+                    <th>Day</th>
+                    <th>Deadline</th>
+                </tr>
+
+                <tr>
+                    <td><input class = "task-input-subject" type="text"></td>
+                    <td><input class = "task-input-name" type="text"></td>
+                    <td><input class = "task-input-day" type="text"></td>
+                    <td><input class = "task-input-deadline" type="text"></td>
+                </tr>
+
+                <tr>
+                    <td><input class = "task-input-subject" type="text"></td>
+                    <td><input class = "task-input-name" type="text"></td>
+                    <td><input class = "task-input-day" type="text"></td>
+                    <td><input class = "task-input-deadline" type="text"></td>
+                </tr>
+
+                <tr>
+                    <td><input class = "task-input-subject" type="text"></td>
+                    <td><input class = "task-input-name" type="text"></td>
+                    <td><input class = "task-input-day" type="text"></td>
+                    <td><input class = "task-input-deadline" type="text"></td>
+                </tr>
+            </table>
+
+            <button class = "new-row-btn">New Row</button>
+            <br><br>
+            <button class = "task-btn">Finished!</button>
+
+        </div>
+
+
+        <div class = "schedule-finished">
+            <h1 id = "title-txt"></h1>
         </div>
     </body>
 
     <script> 
+        /* [ENTER TITLE PAGE] change title heading when the title is submitted */
         var button = document.getElementById("title-btn");
 
         var buttonClick = function(){
@@ -142,65 +187,44 @@
         };
 
         button.addEventListener("click", buttonClick);
+
+        /* [ENTER TASKS PAGE]  */
     </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+
+        /* When to hide / show pages */
         $(".splash").show();
         $(".enter-title").hide();
         $(".enter-tasks").hide();
+        $(".schedule-finished").hide();
 
         $(".splash-btn").click(function (){
             $(".splash").hide();
             $(".enter-title").show();
-        $(".enter-tasks").hide();
+            $(".enter-tasks").hide();
+            $(".schedule-finished").hide();
         });
 
         $(".title-btn").click(function (){
             $(".splash").hide();
             $(".enter-title").hide();
-        $(".enter-tasks").show();
+            $(".enter-tasks").show();
+            $(".schedule-finished").hide();
         });
 
-        /*$(".blog").hide();
-        $(".about").hide();
-        $(".schedule").hide();
-        $(".contact").hide();
-        $(".title").hide();
-        
-        $(".splash-btn").click(function (){
+        $(".task-btn").click(function (){
             $(".splash").hide();
-            $(".title").show();
-            
-            $(".blog").show();
-            $(".about").hide();
-            $(".schedule").hide();
-            $(".contact").hide();
+            $(".enter-title").hide();
+            $(".enter-tasks").hide();
+            $(".schedule-finished").show();
         });
-        
-        $(".nav1").click(function() { 
-            $(".blog").show();
-            $(".about").hide();
-            $(".schedule").hide();
-            $(".contact").hide();
+
+        /* [ENTER TASKS PAGE] Add row button */
+        $(".new-row-btn").click(function (){
+            var newRow = $('<tr><td><input class = "task-input-subject" type="text"></td><td><input class = "task-input-name" type="text"></td><td><input class = "task-input-day" type="text"></td><td><input class = "task-input-deadline" type="text"></td></tr>');
+            $("table").append(newRow);
         });
-        $(".nav2").click(function() { 
-            $(".blog").hide();
-            $(".about").show();
-            $(".schedule").hide();
-            $(".contact").hide();
-        });
-        $(".nav3").click(function() { 
-            $(".blog").hide();
-            $(".about").hide();
-            $(".schedule").show();
-            $(".contact").hide();
-        });
-        $(".nav4").click(function() { 
-            $(".blog").hide();
-            $(".about").hide();
-            $(".schedule").hide();
-            $(".contact").show();
-        });*/
     </script>
 </html>
