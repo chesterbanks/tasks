@@ -146,7 +146,7 @@
             } 
 
             .bg-btn {
-                margin-left: auto; margin-right: auto;
+                margin-left: 40%;
                 position: absolute;
                 margin-top: 100px;
             }
@@ -318,12 +318,22 @@
             $(".prompt-txt").css("padding-top", 270 - minus);
         });
 
-        var backgrounds = ["https://www.stockvault.net/data/2018/04/26/251903/preview16.jpg", "https://images.wallpaperscraft.com/image/form_light_abstraction_bright_76089_4000x2500.jpg", "https://wallpaper-gallery.net/images/pink-and-orange-background/pink-and-orange-background-10.jpg", "https://i2.wp.com/www.lowpolygonart.com/wp-content/uploads/2017/12/Wedding-Day-Blues-300-Vertices.jpeg?resize=840%2C525"];
+        var backgrounds = [
+            "https://www.stockvault.net/data/2018/04/26/251903/preview16.jpg", 
+            "https://images.wallpaperscraft.com/image/form_light_abstraction_bright_76089_4000x2500.jpg", 
+            "https://wallpaper-gallery.net/images/pink-and-orange-background/pink-and-orange-background-10.jpg", 
+            "https://i2.wp.com/www.lowpolygonart.com/wp-content/uploads/2017/12/Wedding-Day-Blues-300-Vertices.jpeg?resize=840%2C525", 
+            "https://s3.envato.com/files/135394699/Pink.jpg",
+            "http://2.bp.blogspot.com/-q-Mlss0jJoY/VGDBwqldRsI/AAAAAAAAACM/n4D4FS_NyxQ/s1600/watercolor_pink.jpg",
+            "http://www.theabercrumbiegroup.com/allaboutwomen/images/abstraction-red-orange-pink.jpg?crc=428895654",
+            "http://handbox.es/wp-content/uploads/2015/07/naranja.jpg",
+            "https://cdn.cnn.com/cnnnext/dam/assets/171204142317-colorscope-orange-image-sunset-full-169.jpg",
+        ];
         var bg = 0;
 
         $(".bg-btn").click(function (){
             bg ++;
-            if(bg > backgrounds.length){
+            if(bg >= backgrounds.length){
                 bg = 0;
             }
             $("body").css("background-image", 'url(' + backgrounds[bg] + ')')
