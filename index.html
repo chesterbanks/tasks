@@ -160,7 +160,7 @@
         <button class = "bg-btn">Change background</button>
 
         <div class="splash">
-            <h1 class="splash-txt">taskhippo</h1>
+            <h1 class="splash-txt">taskmonkey</h1>
 
             <button class = "splash-btn">Get started!</button>
         </div>
@@ -323,7 +323,10 @@
 
         $(".bg-btn").click(function (){
             bg ++;
-            $("body").css("background-image", 'url(' + backgrounds[1] + ')')
+            if(bg > backgrounds.length){
+                bg = 0;
+            }
+            $("body").css("background-image", 'url(' + backgrounds[bg] + ')')
         });
     </script>
 </html>
